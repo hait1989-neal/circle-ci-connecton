@@ -25,10 +25,10 @@ jobs:
 workflows:
   my_workflow:
     jobs:
-      - build:
+      - build
       - test:
           requires:
             - build
-        - analyze:
+      - analyze:
           requires:
             - test
